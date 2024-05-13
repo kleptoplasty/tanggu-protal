@@ -101,14 +101,12 @@
               </div>
             </div>
             <div class="height-[610px] w-[973px] flex items-center">
-              <div class="bg-white rounded-lg shadow-regal-3xl w-[764px] h-[430px]">
-                <BaseCarousel :imglist="data1" @change="(val) => updateIndex1(val)" />
-              </div>
+              <BaseCarousel :imglist="data1" @change="(val) => updateIndex1(val)" />
             </div>
           </div>
         </div>
         <!-- 移动端：数据资源管理 -->
-        <div class="w-moblie-w self-center mx-auto mt-6 xl:hidden">
+        <div class="self-center mx-auto mt-6 w-moblie-w xl:hidden">
           <div
             class="break-words text-regal-black-200 text-xl text-center font-['PingFangSC-Medium'] font-medium whitespace-nowrap leading-5 self-center"
           >
@@ -135,24 +133,56 @@
               </div>
             </div>
             <div class="height-[610px] w-[973px] flex items-center">
-              <div class="bg-white rounded-lg shadow-regal-3xl w-[764px] h-[430px]">
-                <BaseCarousel :imglist="data1" @change="(val) => updateIndex1(val)" />
-              </div>
+              <BaseCarousel :imglist="data1" @change="(val) => updateIndex1(val)" />
             </div>
           </div>
         </div>
       </BaseTabPane>
       <BaseTabPane :name="Locale.Home.Production.SupportPlatform" tab="supporting">
-        <div class="h-96">支撑平台</div>
+        <!-- Web端：数据资源管理 -->
+        <div class="mt-[126px] mx-auto w-[1707px] hidden xl:block">
+          <div class="flex flex-row justify-center">
+            <div class="ml-[210px]">
+              <div
+                class="break-words text-5xl w-full text-left h-12 text-regal-black-200 font-['PingFangSC-Semibold'] font-semibold whitespace-nowrap leading-[48px]"
+              >
+                {{ Locale.Home.Production.SupportPlatform }}
+              </div>
+              <div class="w-[46px] h-[6px] mt-9 bg-regal-blue"></div>
+              <div class="border-l-[1px] border-l-regal-black-400 mt-9">
+                <ul>
+                  <li v-for="(item, index) in data1" :key="index" :class="`w-[542px] h-[108px] bg-[100% 100%] flex items-center ${index_1 === index ? 'bg-liner-blue' : '' }`">
+                    <div class="w-[480px] h-15 ml-6">
+                      <div :class="`w-24 h-6 break-words text-2xl font-['PingFangSC-Medium'] font-medium whitespace-nowrap leading-6 ${index_1 === index ? 'text-regal-blue' : 'text-regal-black-200' }`">{{ item.title }}</div>
+                      <div :class="`w-full h-6 break-words text-base font-normal whitespace-nowrap leading-6 mt-3 ${index_1 === index ? 'text-regal-blue' : 'text-regal-black-200' }`">{{ item.describe }}</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="height-[610px] w-[973px] flex items-center">
+              <BaseCarousel :imglist="data1" @change="(val) => updateIndex1(val)" />
+            </div>
+          </div>
+        </div>
+        <!-- 移动端：数据资源管理 -->
+        <div class="self-center mx-auto mt-6 w-moblie-w xl:hidden">
+          <div
+            class="break-words text-regal-black-200 text-xl text-center font-['PingFangSC-Medium'] font-medium whitespace-nowrap leading-5 self-center"
+          >
+            {{ Locale.Home.Production.SupportPlatform }}
+          </div>
+          <div class="self-center mt-4">
+            <MobileCarousel :imglist="data1" />
+          </div>
+        </div>
       </BaseTabPane>
     </BaseTabs>
     <!-- Web端：数据分析处理 -->
     <div class="mt-[160px] mx-auto mb-[120px] w-[1707px] hidden xl:block">
       <div class="flex flex-row justify-center">
         <div class="height-[610px] w-[973px] flex items-center">
-          <div class="bg-white rounded-lg shadow-regal-3xl w-[764px] h-[430px]">
-            <BaseCarousel :imglist="data2" @change="(val) => updateIndex2(val)" />
-          </div>
+          <BaseCarousel :imglist="data2" @change="(val) => updateIndex2(val)" />
         </div>
         <div class="flex flex-col items-end">
           <div
@@ -175,7 +205,7 @@
       </div>
     </div>
     <!-- 移动端：数据分析处理 -->
-    <div class="w-moblie-w self-center mx-auto my-6 xl:hidden">
+    <div class="self-center mx-auto my-6 w-moblie-w xl:hidden">
       <div
         class="break-words text-regal-black-200 text-xl text-center font-['PingFangSC-Medium'] font-medium whitespace-nowrap leading-5 self-center"
       >
@@ -232,9 +262,7 @@
                   </div>
                 </div>
                 <div class="height-[610px] w-[973px] flex items-center">
-                  <div class="bg-white rounded-lg shadow-regal-3xl w-[764px] h-[430px]">
-                    <BaseCarousel :imglist="data3" @change="(val) => updateIndex3(val)" />
-                  </div>
+                  <BaseCarousel :imglist="data3" @change="(val) => updateIndex3(val)" />
                 </div>
               </div>
             </div>

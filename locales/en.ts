@@ -66,7 +66,7 @@ const en: LocaleType = {
       Investment: 'Investment',
       Energy: 'Energy'
     },
-    DataProtals: '数据服务门户',
+    DataProtals: 'Data Protals',
   },
   Support: {
     TechnicalSupport: 'Technical Support',

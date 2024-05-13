@@ -25,7 +25,7 @@
         介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍
       </span>
     </div>
-    <div class="w-full bg-regal-gary-100 pt-6 pb-9">
+    <div class="w-full pt-6 bg-regal-gary-100 pb-9">
       <div class="w-moblie-w mx-auto xl:pt-[56px] xl:w-full">
         <div class="break-words text-regal-black-200 text-xl font-['PingFangSC-Semibold'] font-semibold text-center whitespace-nowrap leading-5 xl:leading-8 xl:text-[32px] xl:h-8 xl:w-[480px] xl:mx-auto">
           两大产品，提供针对性的解决方案
@@ -55,7 +55,7 @@
         </div>
         <div class="w-[278px] mx-auto xl:w-[556px]">
           <nuxt-img src="/img/icon_jjfa_bg.png" class="w-[278px] h-[278px] xl:w-[556px] xl:h-[556px]" />
-          <span class="block break-words text-regal-blue text-xl font-['PingFangSC-Semibold'] font-semibold whitespace-nowrap text-center leading-5 mt-[23px]">数据治理 + 数据统计</span>
+          <span class="block break-words text-regal-blue text-xl font-['PingFangSC-Semibold'] font-semibold whitespace-nowrap text-center leading-5 mt-[23px] xl:text-[29px] xl:h-[41px] xl:leading-[41px]">数据治理 + 数据统计</span>
         </div>
         <div class="flex flex-col items-end mt-[66px] xl:mt-0">
           <div class="w-moblie-w mx-auto flex flex-row justify-between items-center xl:w-[448px]">

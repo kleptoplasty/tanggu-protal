@@ -81,3 +81,5 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 npm i @nuxtjs/i18n
 
 ## 配置nuxt.config.ts
+# tanggu-protal
+汤谷大数据门户

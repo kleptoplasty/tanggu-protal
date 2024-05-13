@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`bg-white shadow-regal-xl rounded-4xl border-regal-black-300 border-[0.5px] self-center mt-4 w-moblie-w p-[3.5px] xl:mt-14 xl:border-[1px] xl:w-[1032px] mx-auto`"
+    :class="`bg-white shadow-regal-xl rounded-4xl border-regal-black-300 border-[0.5px] self-center mt-4 max-w-[343px] p-[3.5px] xl:mt-14 xl:border-[1px] xl:max-w-[1032px] mx-auto`"
   >
     <div :class="`flex flex-row max-w-[335px] space-x-2 h-[38px] justify-between xl:h-12 xl:max-w-[1024px]`">
       <div

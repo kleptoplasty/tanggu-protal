@@ -8,6 +8,16 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      title: 'tanggu',
+      htmlAttrs: {
+        lang: 'en',
+      },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: '' },
+        { name: 'format-detection', content: 'telephone=no' },
+      ],
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [

@@ -19,6 +19,7 @@ export default {
         'regal-green': 'rgba(80, 211, 148, 1)',
         'regal-blue': 'rgba(0, 111, 255, 1)',
         'regal-blue-3': 'rgba(0, 111, 255, 0.3)',
+        'regal-blue-4': 'rgba(77, 154, 255, 1)',
       },
       backgroundImage: {
         banner: "url('/img/home_banner.png')",

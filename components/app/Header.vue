@@ -1,5 +1,5 @@
 <template>
-  <header class="h-[66px] bg-white relative">
+  <header class="h-[66px] bg-white w-full fixed xl:relative">
     <nav>
       <div class="flex flex-row items-center justify-between w-full">
         <div class="flex flex-row items-center space-x-3 xl:space-x-6">

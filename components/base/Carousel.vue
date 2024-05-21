@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[url('/img/box_bg.png')] bg-contain bg-no-repeat w-[937px] h-[610px] flex items-center justify-center">
+  <div :class="`w-[937px] h-[610px] flex items-center justify-center ${customClass} ${ showBg ? 'bg-[url(\'/img/box_bg.png\')] bg-contain bg-no-repeat' : ''}`">
     <div class="bg-white rounded-lg shadow-regal-3xl w-[764px] h-[430px]">
       <div class="relative">
         <nuxt-img
@@ -44,6 +44,14 @@ export default defineComponent({
     imglist: {
       type: Array as PropType<Array <ITEM>>,
       default: () => [],
+    },
+    showBg: {
+      type: Boolean,
+      default: true,
+    },
+    customClass: {
+      type: String,
+      default: ''
     }
   },
   setup(props, { emit }) {

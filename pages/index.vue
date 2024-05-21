@@ -268,7 +268,19 @@
             </div>
           </BaseTabPane>
           <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPBigScreen" tab="bigscreen">
-            <div class="h-96">经济运行大屏</div>
+            <div class="w-[888px] mx-auto">
+              <div class="w-[384px] h-12 break-words text-regal-black-200 text-[48px] font-['PingFangSC-Semibold'] font-semibold whitespace-nowrap mx-auto mt-[100px]">
+                {{ Locale.Home.DataGovernanceManagement.ISMPBigScreen }}
+              </div>
+              <div class="w-[888px] h-10 break-words text-regal-gary text-2xl font-normal whitespace-nowrap leading-10 mx-auto mt-3 mb-9">
+                描述文字描述文字，描述文字描述文字描述文字描述文字描述文字描述文字描述文。
+              </div>
+              <BaseCarousel
+                :imglist="data4"
+                :show-bg="false"
+                @change="(val) => updateIndex4(val)"
+              />
+            </div>
           </BaseTabPane>
           <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPMap" tab="map">
             <div class="h-96">数据地图</div>
@@ -302,7 +314,7 @@
     {
       title: Locale.Home.DataSourceManagement.DataAcquisition,
       describe: '高效多渠道自动采集，自动化流程，保障数据',
-      banner: '/img/home_banner.png',
+      banner: '/img/demo/平台功能-数据生产-数据采集@2x.png',
     },
     {
       title: Locale.Home.DataSourceManagement.DataClassification,
@@ -317,7 +329,7 @@
     {
       title: Locale.Home.DataSourceManagement.DataPermission,
       describe: '细化权限控制，保障数据安全与合规使用。',
-      banner: '/img/home_banner.png',
+      banner: '/img/demo/平台功能-数据生产-权限管理@2x.png',
     },
   ]);
   
@@ -390,5 +402,29 @@
 
   const updateIndex3 = (val: number) => {
     index_3.value = val;
+  }
+
+  const data4 = computed(() => [
+    {
+      title: Locale.Home.DataGovernanceReport.Comprehensive,
+      describe: '描述文字描述文字，描述文字描述文字文。',
+      banner: '/img/demo/economic-map.png',
+    },
+    {
+      title: Locale.Home.DataGovernanceReport.Industry,
+      describe: '描述文字描述文字，描述文字描述文字文。',
+      banner: '/img/demo/economic-map.png',
+    },
+    {
+      title: Locale.Home.DataGovernanceReport.Industry,
+      describe: '描述文字描述文字，描述文字描述文字文。',
+      banner: '/img/demo/economic-map.png',
+    }
+  ])
+
+  const index_4 = ref(0);
+
+  const updateIndex4 = (val: number) => {
+    index_4.value = val;
   }
 </script>

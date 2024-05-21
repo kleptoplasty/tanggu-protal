@@ -1,6 +1,8 @@
 import type { SetupContext } from 'vue'
 import type { CollapseProps, CollapseEmits, CollapseActiveName } from './constants'
+import { ref } from 'vue'
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT, collapseContextKey } from './constants'
+import { ensureArray } from '@/utils/arrays'
 
 export const useCollapse = (
   props: CollapseProps,

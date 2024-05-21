@@ -41,20 +41,20 @@
     </div>
     <div class="bg-white w-[327px] h-[1px] mx-auto xl:w-[1500px] xl:mt-[26px]"></div>
     <div class="w-[327px] mx-auto xl:hidden">
-      <BaseCollapse v-model="activeName" accordion>
-        <BaseCollapseItem v-for="(item, index) in data" :key="index" :title="item.title" :name="`${index + 1}`">
+      <BasicCollapse v-model="activeName" accordion>
+        <BasicCollapseItem v-for="(item, index) in data" :key="index" :title="item.title" :name="`${index + 1}`">
           <div class="grid grid-cols-3 gap-x-8">
             <span class="block w-[112px] text-sm leading-[14px] text-white" v-for="(ele, idx) in item.content" :key="idx">{{ ele }}</span>
           </div>
-        </BaseCollapseItem>
-        <BaseCollapseItem title="联系方式" name="4">
+        </BasicCollapseItem>
+        <BasicCollapseItem title="联系方式" name="4">
           <div class="text-sm leading-[14px] text-white mb-2">0756-30624700</div>
           <div class="text-sm leading-[14px] text-white mb-2">xxxxx@vicson.com</div>
           <div class="text-sm leading-[14px] text-white">
             广东省珠海市香洲区唐家湾镇大学路101号清华科技园二期H栋二楼
           </div>
-        </BaseCollapseItem>
-      </BaseCollapse>
+        </BasicCollapseItem>
+      </BasicCollapse>
     </div>
     <div class="w-[327px] mx-auto mt-4 text-xs bg-regal-blue pb-10 text-white font-['PingFangSC-Light'] font-light whitespace-nowrap leading-3 flex flex-col xl:flex-row xl:pb-6 xl:w-[461px] xl:text-sm xl:font-normal xl:leading-[14px]">
       <div class="break-words xl:mr-2">版权所有：珠海伟诚科技股份有限公司</div>

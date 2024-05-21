@@ -12,14 +12,13 @@
       </div>
       <nuxt-img src="/img/down-arrow.png" :class="`transition-all w-6 ${isActive ? '' : 'rotate-180'}`"></nuxt-img>
     </button>
-
-    <base-collapse-transition>
+    <BasicCollapseTransition>
       <div v-show="isActive" role="region" :aria-hidden="!isActive" class="collapse-item__wrap border-x-0 border-t-0 border-b-white border-[1px] pb-4">
         <div class="collapse-item__content">
           <slot />
         </div>
       </div>
-    </base-collapse-transition>
+    </BasicCollapseTransition>
   </div>
 </template>
 

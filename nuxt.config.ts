@@ -36,6 +36,7 @@ export default defineNuxtConfig({
   alias: {
     '@/assets': fileURLToPath(new URL('./assets', import.meta.url)),
     '@/locales': fileURLToPath(new URL('./locales', import.meta.url)),
+    '@/utils': fileURLToPath(new URL('./utils', import.meta.url)),
   },
 
   css: ['~/assets/css/main.css', 'animate.css'],

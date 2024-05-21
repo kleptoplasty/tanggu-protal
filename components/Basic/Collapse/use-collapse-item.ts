@@ -1,4 +1,5 @@
 import { type CollapseItemProps, collapseContextKey, useIdInjection } from './constants'
+import { inject, ref, unref, computed } from 'vue'
 
 export const useCollapseItem = (props: CollapseItemProps) => {
   const collapse = inject(collapseContextKey)

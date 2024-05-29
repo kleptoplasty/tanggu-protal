@@ -72,6 +72,11 @@ const en: LocaleType = {
     TechnicalSupport: 'Technical Support',
     CPTechnicalSupport: 'Comprehensive platform technical support',
   },
+  Solutions: {
+    BigData: 'BigData',
+    SmartGovernment: 'SmartGovernment',
+    SmartAffairs: 'SmartAffairs',
+  },
 };
 
 export default en;

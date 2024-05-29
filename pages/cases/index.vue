@@ -2,7 +2,7 @@
   <section class="flex flex-col h-full">
     <div class="flex flex-col w-full">
       <div
-        class="bg-[url('/img/cases_banner.png')] bg-no-repeat overflow-hidden bg-left-82-center bg-cover h-[350px] xl:w-full xl:h-[574px]"
+        class="bg-[url('/img/banner/cases_banner.png')] bg-no-repeat overflow-hidden bg-left-82-center bg-cover h-[350px] xl:w-full xl:h-[574px]"
       >
         <div class="pt-[100px] pb-6 xl:pt-[210px]">
           <div class="break-words text-regal-black-200 mb-6 font-['AlimamaShuHeiTi-Bold font-bold text-center whitespace-nowrap text-2xl xl:text-[52px] xl:w-[416px] xl:h-13 xl:mt-[57px] xl:ml-[210px]">数据统计领域，客户遍及各地</div>

@@ -70,6 +70,11 @@ const cn = {
     TechnicalSupport: '技术支持',
     CPTechnicalSupport: '全方位平台技术支持',
   },
+  Solutions: {
+    BigData: '统计大数据',
+    SmartGovernment: '智慧党政',
+    SmartAffairs: '智慧党务',
+  },
 };
 
 type DeepPartial<T> = T extends object

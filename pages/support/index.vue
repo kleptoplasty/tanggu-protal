@@ -2,7 +2,7 @@
   <section class="flex flex-col h-full">
     <div class="flex flex-col w-full">
       <div
-        class="bg-[url('/img/support_banner.png')] bg-no-repeat overflow-hidden bg-left-8-center bg-cover h-[350px] xl:w-full xl:h-[574px]"
+        class="bg-[url('/img/banner/support_banner.png')] bg-no-repeat overflow-hidden bg-left-8-center bg-cover h-[350px] xl:w-full xl:h-[574px]"
       >
         <div class="pb-6 xl:w-[880px] text-center xl:mx-auto">
           <div class="break-words text-regal-black-200 mb-6 font-['AlimamaShuHeiTi-Bold'] font-bold whitespace-nowrap mt-[100px] text-2xl xl:text-[52px] xl:h-13 xl:mt-[263px]">

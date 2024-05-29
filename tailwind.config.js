@@ -20,6 +20,7 @@ export default {
         'regal-blue': 'rgba(0, 111, 255, 1)',
         'regal-blue-3': 'rgba(0, 111, 255, 0.3)',
         'regal-blue-4': 'rgba(77, 154, 255, 1)',
+        'regal-blue-5': 'rgba(50, 122, 253, 1)',
       },
       backgroundImage: {
         banner: "url('/img/home_banner.png')",
@@ -38,6 +39,7 @@ export default {
         'regal-2xl': '0 30px 20px -14px rgba(9, 3, 73, 0.08)',
         'regal-3xl': '0px 76px 51px -36px rgba(9, 3, 73, 0.08)',
         'regal-4': '0px 32px 24px -25px rgba(0, 14, 77, 0.06)',
+        'regal-5': '0px 10px 33px -35px rgba(1, 0, 53, 0.8)',
       },
       borderRadius: {
         '4xl': '36px',

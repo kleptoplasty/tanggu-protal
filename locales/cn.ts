@@ -51,7 +51,7 @@ const cn = {
     DataGovernanceDescrible: '平台不仅提供了数据采集、存储和管理的功能，还包括了元数据体系的建立和维护，这有助于确保数据的一致性、准确性和可追溯性',
     DataGovernanceManagement: {
       ISMPReport: '统计报表编制',
-      ISMPBigScreen: '经济运行大屏',
+      ISMPBigScreen: '经济运行监测大屏',
       ISMPMap: '数据地图',
       ISMPLibrary: '主题库建设',
       ISMPIndex: '统计指标编制',

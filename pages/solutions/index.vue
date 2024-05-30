@@ -32,8 +32,8 @@
     <div class="w-[256px] h-8 break-words text-regal-black-200 leading-8 text-[32px] font-['PingFangSC-Medium'] font-medium whitespace-nowrap mx-auto mt-[56px]">
       我们可以为你解决
     </div>
-    <BaseTabs v-model="activeName">
-      <BaseTabPane :name="Locale.Solutions.BigData" tab="bigdata">
+    <BasicTab v-model="activeName">
+      <BasicTabPane :label="Locale.Solutions.BigData" name="bigdata">
         <div class="mt-[126px] mx-auto w-[1707px] hidden xl:block">
           <div class="flex flex-row justify-center">
             <div class="ml-[210px] w-[570px] h-[410px] mt-[100px]">
@@ -49,8 +49,8 @@
             </div>
           </div>
         </div>
-      </BaseTabPane>
-      <BaseTabPane :name="Locale.Solutions.SmartGovernment" tab="government">
+      </BasicTabPane>
+      <BasicTabPane :label="Locale.Solutions.SmartGovernment" name="government">
         <div class="mt-[126px] mx-auto w-[1707px] hidden xl:block">
           <div class="flex flex-row justify-center">
             <div class="ml-[210px] w-[570px] h-[410px] mt-[100px]">
@@ -66,8 +66,8 @@
             </div>
           </div>
         </div>
-      </BaseTabPane>
-      <BaseTabPane :name="Locale.Solutions.SmartAffairs" tab="affairs">
+      </BasicTabPane>
+      <BasicTabPane :label="Locale.Solutions.SmartAffairs" name="affairs">
         <div class="mt-[126px] mx-auto w-[1707px] hidden xl:block">
           <div class="flex flex-row justify-center">
             <div class="ml-[210px] w-[570px] h-[410px] mt-[100px]">
@@ -83,8 +83,8 @@
             </div>
           </div>
         </div>
-      </BaseTabPane>
-    </BaseTabs>
+      </BasicTabPane>
+    </BasicTab>
     <div class="bg-regal-gary-100 h-[827px] mt-[120px]">
       <div class="w-[128px] h-8 break-words text-regal-black-200 leading-8 text-[32px] font-['PingFangSC-Medium'] font-medium whitespace-nowrap mx-auto mt-[56px]">
         总体框架
@@ -155,12 +155,12 @@
     {
       title: Locale.Home.DataSourceManagement.DataClassification,
       describe: '按需分类存储，简化数据检索，提高业务效率。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataSourceManagement.DataQuality,
       describe: '严格监控，确保数据准确性，提升决策质量。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataSourceManagement.DataPermission,

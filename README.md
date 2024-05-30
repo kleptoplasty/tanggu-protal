@@ -83,3 +83,6 @@ npm i @nuxtjs/i18n
 ## 配置nuxt.config.ts
 # tanggu-protal
 汤谷大数据门户
+
+# 临时线上地址
+https://tanggu-protal.vercel.app/

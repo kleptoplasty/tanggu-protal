@@ -77,8 +77,8 @@
         {{ Locale.Home.PlatformFunction }}
       </div>
     </div>
-    <BaseTabs v-model="activeName">
-      <BaseTabPane :name="Locale.Home.Production.DataProduction" tab="production">
+    <BasicTab v-model="activeName">
+      <BasicTabPane :label="Locale.Home.Production.DataProduction" name="production">
         <!-- Web端：数据资源管理 -->
         <div class="mt-[126px] mx-auto w-[1707px] hidden xl:block">
           <div class="flex flex-row justify-center">
@@ -116,8 +116,8 @@
             <MobileCarousel :imglist="data1" />
           </div>
         </div>
-      </BaseTabPane>
-      <BaseTabPane :name="Locale.Home.Production.DataService" tab="service">
+      </BasicTabPane>
+      <BasicTabPane :label="Locale.Home.Production.DataService" name="service">
         <!-- Web端：数据服务门户 -->
         <div class="mt-[126px] mx-auto w-[1707px] hidden xl:block">
           <div class="flex flex-row items-center justify-center">
@@ -137,8 +137,8 @@
             </div>
           </div>
         </div>
-      </BaseTabPane>
-      <BaseTabPane :name="Locale.Home.Production.SupportPlatform" tab="supporting">
+      </BasicTabPane>
+      <BasicTabPane :label="Locale.Home.Production.SupportPlatform" name="supporting">
         <!-- Web端：数据资源管理 -->
         <div class="mt-[126px] mx-auto w-[1707px] hidden xl:block">
           <div class="flex flex-row justify-center">
@@ -176,8 +176,8 @@
             <MobileCarousel :imglist="data1" />
           </div>
         </div>
-      </BaseTabPane>
-    </BaseTabs>
+      </BasicTabPane>
+    </BasicTab>
     <!-- Web端：数据分析处理 -->
     <div class="mt-[160px] mx-auto mb-[120px] w-[1707px] hidden xl:block">
       <div class="flex flex-row justify-center">
@@ -232,21 +232,21 @@
       </div>
       <!-- 移动端：数据治理服务 -->
       <div class="mt-5 xl:hidden">
-        <BaseTabs v-model="activeName2">
-          <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPReport" tab="report">
+        <BasicTab v-model="activeName2">
+          <BasicTabPane :label="Locale.Home.DataGovernanceManagement.ISMPReport" name="report">
             <div class="mt-9">
               <MobileCarousel :imglist="data3" />
             </div>
-          </BaseTabPane>
-          <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPBigScreen" tab="bigscreen">
+          </BasicTabPane>
+          <BasicTabPane :label="Locale.Home.DataGovernanceManagement.ISMPBigScreen" name="bigscreen">
             <div class="h-96">经济运行大屏</div>
-          </BaseTabPane>
-        </BaseTabs>
+          </BasicTabPane>
+        </BasicTab>
       </div>
       <!-- Web端：数据治理服务 -->
       <div class="hidden xl:block">
-        <BaseTabs v-model="activeName2">
-          <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPReport" tab="report">
+        <BasicTab v-model="activeName2">
+          <BasicTabPane :label="Locale.Home.DataGovernanceManagement.ISMPReport" name="report">
             <div class="mt-[126px] mx-auto w-[1707px] hidden xl:block">
               <div class="flex flex-row justify-center">
                 <div class="ml-[210px]">
@@ -266,8 +266,8 @@
                 </div>
               </div>
             </div>
-          </BaseTabPane>
-          <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPBigScreen" tab="bigscreen">
+          </BasicTabPane>
+          <BasicTabPane :label="Locale.Home.DataGovernanceManagement.ISMPBigScreen" name="bigscreen">
             <div class="w-[888px] mx-auto">
               <div class="w-[384px] h-12 break-words text-regal-black-200 text-[48px] font-['PingFangSC-Semibold'] font-semibold whitespace-nowrap mx-auto mt-[100px]">
                 {{ Locale.Home.DataGovernanceManagement.ISMPBigScreen }}
@@ -281,17 +281,17 @@
                 @change="(val) => updateIndex4(val)"
               />
             </div>
-          </BaseTabPane>
-          <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPMap" tab="map">
+          </BasicTabPane>
+          <BasicTabPane :label="Locale.Home.DataGovernanceManagement.ISMPMap" name="map">
             <div class="h-96">数据地图</div>
-          </BaseTabPane>
-          <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPLibrary" tab="library">
+          </BasicTabPane>
+          <BasicTabPane :label="Locale.Home.DataGovernanceManagement.ISMPLibrary" name="library">
             <div class="h-96">主题库建设</div>
-          </BaseTabPane>
-          <BaseTabPane :name="Locale.Home.DataGovernanceManagement.ISMPIndex" tab="index">
+          </BasicTabPane>
+          <BasicTabPane :label="Locale.Home.DataGovernanceManagement.ISMPIndex" name="index">
             <div class="h-96">统计指标编制</div>
-          </BaseTabPane>
-        </BaseTabs>
+          </BasicTabPane>
+        </BasicTab>
       </div>
     </div>
   </section>
@@ -300,6 +300,8 @@
 <script setup lang="ts">
   import Locale from '@/locales';
   import { computed, ref } from 'vue';
+
+  const activeName22 = ref('service');
 
   const list = computed(() => [
     Locale.Home.Describe.DataSecurity,
@@ -319,12 +321,12 @@
     {
       title: Locale.Home.DataSourceManagement.DataClassification,
       describe: '按需分类存储，简化数据检索，提高业务效率。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataSourceManagement.DataQuality,
       describe: '严格监控，确保数据准确性，提升决策质量。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataSourceManagement.DataPermission,
@@ -343,17 +345,17 @@
     {
       title: Locale.Home.DataAnalysisManagement.DataSummary,
       describe: '一键汇总分析，快速生成宏观数据报告。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataAnalysisManagement.ProcessingTask,
       describe: '流程自动化，提升数据处理与分析的效率。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataAnalysisManagement.DataPublishing,
       describe: '即时发布，确保数据共享的时效性和便捷性。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
   ])
 
@@ -369,32 +371,32 @@
     {
       title: Locale.Home.DataGovernanceReport.Comprehensive,
       describe: '描述文字描述文字，描述文字描述文字文。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataGovernanceReport.Industry,
       describe: '描述文字描述文字，描述文字描述文字文。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataGovernanceReport.LaborManagement,
       describe: '描述文字描述文字，描述文字描述文字文。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataGovernanceReport.Service,
       describe: '描述文字描述文字，描述文字描述文字文。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataGovernanceReport.Investment,
       describe: '描述文字描述文字，描述文字描述文字文。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
     {
       title: Locale.Home.DataGovernanceReport.Energy,
       describe: '描述文字描述文字，描述文字描述文字文。',
-      banner: '/img/home_banner.png',
+      banner: '/img/banner/home_banner.png',
     },
   ])
 

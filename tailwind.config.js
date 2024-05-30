@@ -23,7 +23,7 @@ export default {
         'regal-blue-5': 'rgba(50, 122, 253, 1)',
       },
       backgroundImage: {
-        banner: "url('/img/home_banner.png')",
+        banner: "url('/img/banner/home_banner.png')",
         'liner-blue': 'linear-gradient( 270deg, rgba(0,111,255,0) 0%, rgba(0,111,255,0.1) 100%)',
         'liner-blue-reverse': 'linear-gradient( 270deg, rgba(0,111,255,0.1) 0%, rgba(0,111,255,0)  100%);'
       },

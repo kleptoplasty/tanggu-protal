@@ -133,7 +133,7 @@
               </div>
             </div>
             <div class="height-[610px] w-[973px] flex items-center">
-              <BaseCarousel :imglist="data1" @change="(val) => updateIndex1(val)" />
+              <BaseCarousel :imglist="data1" />
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@
               </div>
             </div>
             <div class="height-[610px] w-[973px] flex items-center">
-              <BaseCarousel :imglist="data1" @change="(val) => updateIndex1(val)" />
+              <BaseCarousel :imglist="data1" />
             </div>
           </div>
         </div>
@@ -269,7 +269,7 @@
           </BasicTabPane>
           <BasicTabPane :label="Locale.Home.DataGovernanceManagement.ISMPBigScreen" name="bigscreen">
             <div class="w-[888px] mx-auto">
-              <div class="w-[384px] h-12 break-words text-regal-black-200 text-[48px] font-['PingFangSC-Semibold'] font-semibold whitespace-nowrap mx-auto mt-[100px]">
+              <div class="w-[384px] h-12 break-words text-regal-black-200 text-5xl font-['PingFangSC-Semibold'] font-semibold whitespace-nowrap leading-12 mx-auto mt-[100px]">
                 {{ Locale.Home.DataGovernanceManagement.ISMPBigScreen }}
               </div>
               <div class="w-[888px] h-10 break-words text-regal-gary text-2xl font-normal whitespace-nowrap leading-10 mx-auto mt-3 mb-9">
@@ -278,6 +278,8 @@
               <BaseCarousel
                 :imglist="data4"
                 :show-bg="false"
+                :width="984"
+                :height="554"
                 @change="(val) => updateIndex4(val)"
               />
             </div>

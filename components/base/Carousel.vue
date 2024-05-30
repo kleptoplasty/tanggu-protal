@@ -1,5 +1,5 @@
 <template>
-  <div :class="`w-[937px] h-[610px] flex items-center justify-center ${bgStyle} ${customClass}`">
+  <div :class="`w-[937px] h-[610px] flex items-center justify-center ${bgStyle}`">
     <div class="bg-white rounded-lg shadow-regal-3xl w-[764px] h-[430px]">
       <div class="relative">
         <nuxt-img
@@ -12,14 +12,16 @@
           @mouseleave="changeInterval(false)"
           @mouseover="changeInterval(true)"
         />
-        <ul class="absolute flex flex-row justify-center space-x-1 bottom-[10px] inset-x-2/4 w-[120px] left-[310px]">
-          <li
-            v-for="(_, index) in imglist"
-            :key="index"
-            :class="`w-[36px] h-[12px] border-[1px] ${index === current ? 'bg-regal-blue border-regal-blue' : ''}`"
-            @click="changeImg(index)"
-          />
-        </ul>
+        <div class="absolute bottom-[10px] w-full">
+          <ul class="flex mx-auto space-x-1 w-max">
+            <li
+              v-for="(_, index) in imglist"
+              :key="index"
+              :class="`w-[36px] h-[12px] border-[1px] ${index === current ? 'bg-regal-blue border-regal-blue' : ''}`"
+              @click="changeImg(index)"
+            />
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -49,10 +51,14 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
-    customClass: {
-      type: String,
-      default: ''
-    }
+    width: {
+      type: Number,
+      default: 764,
+    },
+    height: {
+      type: Number,
+      default: 430,
+    },
   },
   setup(props, { emit }) {
     const current = ref(0);
@@ -100,7 +106,7 @@ export default defineComponent({
       current,
       changeImg,
       changeInterval,
-      bgStyle
+      bgStyle,
     }
   }
 });

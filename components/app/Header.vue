@@ -10,7 +10,7 @@
           <!-- menu -->
           <ul class="hidden w-full duration-300 origin-top xl:space-x-10 xl:block">
             <li v-for="(route, index) in routes" :key="index" class="inline-block">
-              <nuxt-link :to="route.to" activeClass="text-[#0d77ff] no-underline">
+              <nuxt-link class="hover:text-regal-blue" :to="route.to" activeClass="text-regal-blue">
                 {{ route.name }}
               </nuxt-link>
             </li>
@@ -18,10 +18,10 @@
         </div>
         <!-- login/register -->
         <div class="hidden space-x-3 mr-52 xl:block">
-          <nuxt-link class="xl:px-6 hover:text-[#0d77ff]" to="/login">
+          <nuxt-link class="xl:px-6 hover:text-regal-blue" to="/login" activeClass="text-regal-blue">
             {{ Locale.Login.SignInFormTitle }}
           </nuxt-link>
-          <nuxt-link class="xl:px-6 hover:text-[#0d77ff]" to="/register">
+          <nuxt-link class="xl:px-6 hover:text-regal-blue" to="/register" activeClass="text-regal-blue">
             {{ Locale.Login.SignUpFormTitle }}
           </nuxt-link>
           <!-- <div @click="changeLang('cn')">中文</div>
@@ -51,7 +51,7 @@
         @click="showMenu = !showMenu"
       >
         <span class="flex flex-row items-center justify-between p-4">
-          <nuxt-link :to="route.to" activeClass="text-[#0d77ff] no-underline">
+          <nuxt-link :to="route.to" activeClass="text-regal-blue no-underline">
             {{ route.name }}
           </nuxt-link>
           <nuxt-img src="/img/icon_right_n.png" class="w-4" alt="right" />

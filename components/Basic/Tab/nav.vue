@@ -54,42 +54,13 @@ export default defineComponent({
         ? 'width'
         : 'height'
     )
+    
     const navStyle = computed<CSSProperties>(() => {
       const dir = sizeName.value === 'width' ? 'X' : 'Y'
       return {
         transform: `translate${dir}(-${navOffset.value}px)`,
       }
     })
-
-    const scrollPrev = () => {
-      if (!navScroll$.value) return
-
-      const containerSize = navScroll$.value[`offset${capitalize(sizeName.value)}`]
-      const currentOffset = navOffset.value
-
-      if (!currentOffset) return
-
-      const newOffset = currentOffset > containerSize ? currentOffset - containerSize : 0
-
-      navOffset.value = newOffset
-    }
-
-    const scrollNext = () => {
-      if (!navScroll$.value || !nav$.value) return
-
-      const navSize = nav$.value[`offset${capitalize(sizeName.value)}`]
-      const containerSize = navScroll$.value[`offset${capitalize(sizeName.value)}`]
-      const currentOffset = navOffset.value
-
-      if (navSize - currentOffset <= containerSize) return
-
-      const newOffset =
-        navSize - currentOffset > containerSize * 2
-          ? currentOffset + containerSize
-          : navSize - containerSize
-
-      navOffset.value = newOffset
-    }
 
     const scrollToActiveTab = async () => {
       const nav = nav$.value

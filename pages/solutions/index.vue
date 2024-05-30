@@ -90,7 +90,7 @@
         总体框架
       </div>
       <div class="w-[1500px] h-[543px] flex flex-wrap justify-between mx-auto mt-[100px]">
-        <div v-for="(item, index) in data2" :key="index" :class="`shadow-regal-5 rounded-xl bg-[url('${item.bgimg}')] bg-contain bg-no-repeat w-[700px] h-[234px]`">
+        <div v-for="(item, index) in data2" :key="index" :class="item.bgimg + ` shadow-regal-5 rounded-xl bg-contain bg-no-repeat w-[700px] h-[234px]`">
           <div class="w-24 h-6 mt-[66px] ml-14">
             <span class="w-24 h-6 break-words text-regal-black-200 text-2xl font-['PingFangSC-Semibold'] font-semibold whitespace-nowrap leading-6">{{ item.title }}</span>
           </div>
@@ -179,22 +179,22 @@
     {
       title: '三个原则',
       describe: ['平台规划生态化', '平台规划生态化', '平台规划生态化'],
-      bgimg: '/img/solutions/solutions_principle.png',
+      bgimg: "bg-[url('/img/solutions/solutions_principle.png')]",
     },
     {
       title: '四步规则',
       describe: ['整合治理', '应用融合', '开放共享', '服务运营'],
-      bgimg: '/img/solutions/solutions_rule.png',
+      bgimg: "bg-[url('/img/solutions/solutions_rule.png')]",
     },
     {
       title: '五个平台',
       describe: ['大数据服务平台、资源体系管理平台、数据资源整合平台、数据交换平台、数据应用平台'],
-      bgimg: '/img/solutions/solutions_platform.png',
+      bgimg: "bg-[url('/img/solutions/solutions_platform.png')]",
     },
     {
       title: 'N个智慧专题',
       describe: ['提供N个智慧专题分析及应用服务'],
-      bgimg: '/img/solutions/solutions_special.png',
+      bgimg: "bg-[url('/img/solutions/solutions_special.png')]",
     },
   ]);
 </script>

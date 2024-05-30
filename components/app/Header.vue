@@ -1,5 +1,5 @@
 <template>
-  <header class="h-[66px] bg-white w-full fixed xl:relative">
+  <header class="h-[66px] bg-white w-full fixed xl:relative z-[99999]">
     <nav>
       <div class="flex flex-row items-center justify-between w-full">
         <div class="flex flex-row items-center space-x-3 xl:space-x-6">
@@ -18,12 +18,12 @@
         </div>
         <!-- login/register -->
         <div class="hidden space-x-3 mr-52 xl:block">
-          <nuxt-link class="xl:px-6 hover:text-[#0d77ff]" to="/login">{{
-            Locale.Login.SignInFormTitle
-          }}</nuxt-link>
-          <nuxt-link class="xl:px-6 hover:text-[#0d77ff]" to="/register">{{
-            Locale.Login.SignUpFormTitle
-          }}</nuxt-link>
+          <nuxt-link class="xl:px-6 hover:text-[#0d77ff]" to="/login">
+            {{ Locale.Login.SignInFormTitle }}
+          </nuxt-link>
+          <nuxt-link class="xl:px-6 hover:text-[#0d77ff]" to="/register">
+            {{ Locale.Login.SignUpFormTitle }}
+          </nuxt-link>
           <!-- <div @click="changeLang('cn')">中文</div>
           <div @click="changeLang('en')">English</div> -->
         </div>
@@ -38,6 +38,7 @@
       </div>
     </nav>
   </header>
+  <!-- mobile menu -->
   <div
     v-show="showMenu"
     class="w-full h-full bg-white opacity-95 fixed top-[65px] backdrop-blur-md z-[9999]"
@@ -74,13 +75,3 @@
 
   const showMenu = ref(false);
 </script>
-
-<style scoped>
-  /* a {
-
-  &.router-link-exact-active, &.router-link-active, &:hover {
-    text-decoration: none;
-    color: #0d77ff;
-  }
-} */
-</style>

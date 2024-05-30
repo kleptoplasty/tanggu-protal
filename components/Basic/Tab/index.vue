@@ -87,7 +87,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
+  <div class="z-10">
     <BasicTabNav
       ref="nav$"
       :currentName="currentName"

@@ -8,14 +8,16 @@
         @click="changeImg(index)"
       />
     </ul>
-    <div
-      class="break-words text-regal-blue text-base font-['PingFangSC-Medium'] whitespace-nowrap leading-4 mt-6 text-center"
-    >
-      {{ imglist[current].title }}
-    </div>
-    <div class="mt-2 mb-3 text-xs leading-4 text-center break-words text-regal-blue opacity-60 z-0">
-      {{ imglist[current].describe }}
-    </div>
+    <slot name="describe">
+      <div
+        class="break-words text-regal-blue text-base font-['PingFangSC-Medium'] whitespace-nowrap leading-4 mt-6 text-center"
+      >
+        {{ imglist[current].title }}
+      </div>
+      <div class="z-0 mt-2 mb-3 text-xs leading-4 text-center break-words text-regal-blue opacity-60">
+        {{ imglist[current].describe }}
+      </div>
+    </slot>
     <nuxt-img
       v-for="(item, index) in imglist"
       :key="index"

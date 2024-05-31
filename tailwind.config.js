@@ -33,6 +33,7 @@ export default {
         'left-82-center': 'left 82% center',
         'left-8-center': 'left 8% center',
         'left-86-center': 'left 86% center',
+        'left-72-top': 'left 72% top 52px',
       },
       boxShadow: {
         'regal-xl': '0 21px 15px -22px rgba(0, 0, 0, 0.11)',

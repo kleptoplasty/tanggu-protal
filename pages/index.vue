@@ -2,7 +2,7 @@
   <section class="flex flex-col h-full">
     <div class="flex flex-col w-full">
       <div
-        class="bg-[url('/img/banner/home_banner.png')] bg-no-repeat overflow-hidden bg-left-66-center bg-cover h-[350px] xl:w-full xl:h-[574px]"
+        class="bg-[url('/img/banner/home_banner.png')] bg-no-repeat overflow-hidden bg-left-66-center bg-cover h-[350px] xl:w-full xl:h-[574px] xl:bg-top"
       >
         <div class="pt-[55px] pr-[167px] pb-6 pl-4 xl:p-0">
           <span

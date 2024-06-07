@@ -10,13 +10,8 @@
         </div>
       </div>
     </div>
-    <div class="xl:w-32 xl:h-8 xl:text-3xl xl:mt-[117px] xl:mb-6 xl:leading-8 mx-auto break-words text-regal-black-200 font-['PingFangSC-Medium'] font-medium whitespace-nowrap">
+    <div class="xl:w-32 xl:h-8 xl:text-3xl xl:mt-14 xl:mb-6 xl:leading-8 mx-auto break-words text-regal-black-200 font-['PingFangSC-Medium'] font-medium whitespace-nowrap">
       精选案例
-    </div>
-    <div class="block xl:hidden">
-      <div class="flex flex-col items-center justify-center mx-auto mb-9 xl:grid xl:grid-cols-3 xl:gap-x-16 xl:gap-y-8">
-        <BaseCard v-for="(item, index) in casesMobile" :key="index" :info="item" />
-      </div>
     </div>
     <div class="hidden xl:block">
       <div class="w-full border-b-regal-gary-300 border-b-[1px] border-solid">
@@ -42,6 +37,11 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="block xl:hidden">
+      <div class="flex flex-col items-center justify-center mx-auto mb-9 xl:grid xl:grid-cols-3 xl:gap-x-16 xl:gap-y-8">
+        <BaseCard v-for="(item, index) in casesMobile" :key="index" :info="item" />
       </div>
     </div>
   </section>

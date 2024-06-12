@@ -274,7 +274,7 @@ export default defineComponent({
             emit('tabClick', pane, pane.tabName, ev)
           }"
         >
-          <span class="font-normal break-words text:sm align-right whitespace-nowrap leading-[14px] xl:text-right xl:leading-4 cursor-pointer">
+          <span class="font-normal break-words text-sm align-right whitespace-nowrap leading-[14px] xl:text-right xl:leading-4 cursor-pointer">
             {{ pane.tabLabelContent }}
           </span>
         </div>

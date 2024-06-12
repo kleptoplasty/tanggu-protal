@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="xl:w-32 xl:h-8 xl:text-3xl xl:mt-14 xl:mb-6 xl:leading-8 mx-auto break-words text-regal-black-200 font-['PingFangSC-Medium'] font-medium whitespace-nowrap">
+    <div class="mt-6 mb-8 text-xl leading-5 mx-auto break-words text-regal-black-200 font-['PingFangSC-Medium'] font-medium whitespace-nowrap xl:w-32 xl:h-8 xl:text-3xl xl:mt-14 xl:mb-6 xl:leading-8">
       精选案例
     </div>
     <div class="hidden xl:block">
@@ -23,25 +23,39 @@
           </div>
         </div>
       </div>
-      <div class="xl:my-9">
-        <div class="flex">
-          <nuxt-img :src="cases[currentTab].banner" class="w-full h-[409px]"/>
-          <div class="absolute right-14">
-            <div class="xl:w-[824px] mt-14">
-              <nuxt-img :src="cases[currentTab].icon" class="w-[223px] h-14"/>
-              <div class="xl:mt-4">
-                <p v-for="(item, index) in cases[currentTab].introduction" :key="index" class="mt-3 text-base font-normal leading-8 break-words text-regal-gary">{{ item }}</p>
-              </div>
-              <div class="xl:mt-12 xl:leading-5 xl:text-xl text-regal-black-200 font-['PingFangSC-Medium'] font-medium whitespace-nowrap break-words ">使用产品 / 解决方案</div>
-              <div class="break-words xl:mt-4 xl:text-base xl:leading-8 font-noraml text-regal-gary">{{ cases[currentTab].productions.join() }}</div>
-            </div>
+    </div>
+    <div class="block xl:hidden">
+      <div class="mx-auto w-moblie-w">
+        <div class="flex flex-row justify-between bg-white shadow-regal-xl rounded-4xl border-regal-black-300 border-[0.5px] self-center p-[4px]">
+          <div v-for="(item, index) in case1" :key="index" :class="`flex flex-col items-center justify-center rounded-[26px] py-3 w-[160px] ${currentTab === index ? 'bg-regal-blue text-white' : ''}`" @click="changeTab(item)">
+            <span class="font-normal break-words text-sm align-right whitespace-nowrap leading-[14px]">
+              {{ item.title }}
+            </span>
+          </div>
+        </div>
+        <div class="flex flex-row justify-between bg-white shadow-regal-xl rounded-4xl border-regal-black-300 border-[0.5px] self-center p-[4px] mt-3">
+          <div v-for="(item, index) in case2" :key="index" :class="`flex flex-col items-center justify-center rounded-[26px] py-3 w-[160px] ${currentTab === index + 2? 'bg-regal-blue text-white' : ''}`" @click="changeTab(item)">
+            <span class="font-normal break-words text-sm align-right whitespace-nowrap leading-[14px]">
+              {{ item.title }}
+            </span>
           </div>
         </div>
       </div>
     </div>
-    <div class="block xl:hidden">
-      <div class="flex flex-col items-center justify-center mx-auto mb-9 xl:grid xl:grid-cols-3 xl:gap-x-16 xl:gap-y-8">
-        <BaseCard v-for="(item, index) in casesMobile" :key="index" :info="item" />
+    <div class="mb-8 overflow-hidden w-moblie-w mt-9 xl:my-9 xl:w-full">
+      <div v-for="(item, index) in cases" :class="`${currentTab === index ? 'flex' : 'hidden'}`">
+        <nuxt-img :src="item.banner" class="relative w-[1919px] opacity-70 xl:w-full xl:opacity-100 h-[409px]" loading="lazy"/>
+        <div class="absolute right-14">
+          <div class="w-moblie-w mt-12 xl:w-[824px] xl:mt-14">
+            <nuxt-img :src="item.icon" class="w-[223px] h-14 hidden xl:block" loading="lazy"/>
+            <span class="block xl:hidden break-words text-regal-black-200 text-xl font-['PingFangSC-Medium'] font-medium whitespace-nowrap leading-5">{{ item.title }}</span>
+            <div class="mt-4">
+              <p v-for="(ele, idx) in item.introduction" :key="idx" class="mt-3 text-sm leading-[23px] xl:text-base font-normal xl:leading-8 break-words text-regal-black-200 xl:text-regal-gary">{{ ele }}</p>
+            </div>
+            <div class="mt-12 text-base leading-4 xl:leading-5 xl:text-xl text-regal-black-200 font-['PingFangSC-Medium'] font-medium whitespace-nowrap break-words ">使用产品 / 解决方案</div>
+            <div class="text-sm leading-[23px] break-words xl:mt-4 xl:text-base xl:leading-8 font-noraml text-regal-gary">{{ item.productions.join() }}</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -55,45 +69,6 @@ interface CASEITEM {
   introduction: string[];
   productions: string[];
 }
-
-const casesMobile = computed(() => [
-  {
-    banner: '',
-    logo: '',
-    title: '公司名称',
-    describe: '描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述',
-  },
-  {
-    banner: '',
-    logo: '',
-    title: '公司名称',
-    describe: '描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述',
-  },
-  {
-    banner: '',
-    logo: '',
-    title: '公司名称',
-    describe: '描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述',
-  },
-  {
-    banner: '',
-    logo: '',
-    title: '公司名称',
-    describe: '描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述',
-  },
-  {
-    banner: '',
-    logo: '',
-    title: '公司名称',
-    describe: '描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述',
-  },
-  {
-    banner: '',
-    logo: '',
-    title: '公司名称',
-    describe: '描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述',
-  },
-])
 
 const cases = [
   {
@@ -138,6 +113,9 @@ const cases = [
   },
 ]
 
+const case1 = JSON.parse(JSON.stringify(cases)).splice(0, 2);
+const case2 = JSON.parse(JSON.stringify(cases)).splice(2, 4);
+
 const currentTab = ref(0);
 
 const changeTab = (item: CASEITEM) => {
@@ -160,4 +138,10 @@ function startInterval(){
     }
   }, 1500))
 }
+
+const bgImg = computed(() => {
+  return (img: string) => {
+    return `bg-[url('${img}')] bg-no-repeat bg-left-82-center bg-cover`
+  }
+})
 </script>
